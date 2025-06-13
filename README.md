@@ -1,4 +1,4 @@
-# 🚀 FocusLipun - Developer Portfolio Website
+# 🚀 FocusCore - Developer Personal Website
 
 Welcome to **FocusLipun**, a modern, responsive, and aesthetic personal  website built to showcase your skills, projects, daily tasks, blogs, and professional profiles.
 
@@ -35,7 +35,7 @@ Welcome to **FocusLipun**, a modern, responsive, and aesthetic personal  website
 ---
 
 ## 🔗 Live Demo
---[Click HERE!!!]() 
+--[Click HERE!!!](https://lipunrout.github.io/KeepGoingLipun/) 
 
 
 ---
