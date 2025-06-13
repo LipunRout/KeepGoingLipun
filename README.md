@@ -20,6 +20,7 @@ Welcome to **FocusLipun**, a modern, responsive, and aesthetic personal  website
 ## 📷 Preview
 
 ![Preview](ss1.png)  
+![Preview](ss2.png)  
 *A screenshot of the homepage/hero section.*
 
 ---
