@@ -369,3 +369,16 @@ body {
   transform: translateY(-6px);
   transition: all 0.3s ease;
 }
+
+/* Custom pointer base */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #4ea8de;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease-out;
+}

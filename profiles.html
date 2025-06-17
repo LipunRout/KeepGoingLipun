@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Profile | FocusCore</title>
-  
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.png" sizes="32x32" type="image/png" />
-<link rel="icon" href="favicon.png" sizes="16x16" type="image/png" />
+  <link rel="icon" href="favicon.png" sizes="16x16" type="image/png" />
 
   <style>
     body {
@@ -88,90 +89,95 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg sticky-top shadow-sm"
-  style="background: linear-gradient(90deg, #1a2630, #47384d, #354635);">
-  <div class="container">
-        <a class="navbar-brand fw-bold fs-4" href="index.html">
-              <span style="color:#FFD166;">Focus</span><span style="color:#FFFFFF;">Core</span>
-        </a>
+    style="background: linear-gradient(90deg, #1a2630, #47384d, #354635);">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="index.html">
+        <span style="color:#FFD166;">Focus</span><span style="color:#FFFFFF;">Core</span>
+      </a>
 
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarNav" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-        </button>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-              <ul class="navbar-nav text-center">
-                    <li class="nav-item mx-2">
-                          <a class="nav-link text-white fw-medium nav-animate" href="index.html#tasks">Tasks</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                          <a class="nav-link text-white fw-medium nav-animate" href="index.html#project">Projects</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                          <a class="nav-link text-white fw-medium nav-animate" href="index.html#blog">Blog</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                          <a class="nav-link text-white fw-medium nav-animate" href="index.html#contact">Contact</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                          <a class="btn btn-outline-warning rounded-pill px-3 py-1" href="index.html"
-                                role="button">Home</a>
-                    </li>
-              </ul>
-        </div>
-  </div>
-</nav>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white fw-medium nav-animate" href="index.html#tasks">Tasks</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white fw-medium nav-animate" href="index.html#project">Projects</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white fw-medium nav-animate" href="index.html#blog">Blog</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white fw-medium nav-animate" href="index.html#contact">Contact</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="btn btn-outline-warning rounded-pill px-3 py-1" href="index.html" role="button">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<!-- Profile Hero Image -->
-<section class="text-center pt-5 pb-3" style="background: linear-gradient(to right, #f0f4ff, #ffffff);">
-  <a href="https://www.linkedin.com/in/lipun-rout-a564b6285/" target="_blank">
-    <img src="IMG3.JPG" alt="Lipun Rout" class="profile-img mb-3" />
-  </a>
-  <div class="text-center my-4">
-    <h2 class="hero-title fw-bold">Lipun Rout</h2>
-    <p class="hero-subtitle">
-      <span id="typing-text"></span>
-    </p>
-    
-  </div>
-  
+  <!-- Profile Hero Image -->
+  <section class="text-center pt-5 pb-3" style="background: linear-gradient(to right, #f0f4ff, #ffffff);">
+    <a href="https://www.linkedin.com/in/lipun-rout-a564b6285/" target="_blank">
+      <img src="IMG3.JPG" alt="Lipun Rout" class="profile-img mb-3" />
+    </a>
+    <div class="text-center my-4">
+      <h2 class="hero-title fw-bold">Lipun Rout</h2>
+      <p class="hero-subtitle">
+        <span id="typing-text"></span>
+      </p>
 
-</section>
+    </div>
+
+
+  </section>
 
   <!-- Profiles Section -->
   <section class="container py-5">
     <h2 class="section-title text-center mb-5">My Profiles</h2>
     <div class="row justify-content-center g-4">
       <div class="col-md-4">
-        <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.1s;" onclick="window.open('https://github.com/LipunRout', '_blank')">
+        <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.1s;"
+          onclick="window.open('https://github.com/LipunRout', '_blank')">
           <h5>GitHub</h5>
           <p>Check out my coding projects and repos</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.2s;" onclick="window.open('https://www.linkedin.com/in/lipun-rout-a564b6285/', '_blank')">
+        <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.2s;"
+          onclick="window.open('https://www.linkedin.com/in/lipun-rout-a564b6285/', '_blank')">
           <h5>LinkedIn</h5>
           <p>Connect professionally and view my resume</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.3s;" onclick="window.open('https://leetcode.com/u/lipunrout07/', '_blank')">
+        <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.3s;"
+          onclick="window.open('https://leetcode.com/u/lipunrout07/', '_blank')">
           <h5>LeetCode</h5>
           <p>My algorithm practice and contest profile</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.4s;" onclick="window.open('https://www.hackerrank.com/profile/lipunrout0107', '_blank')">
+        <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.4s;"
+          onclick="window.open('https://www.hackerrank.com/profile/lipunrout0107', '_blank')">
           <h5>HackerRank</h5>
           <p>Challenges and competitions profile</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.s;" onclick="window.open('https://www.naukri.com/mnjuser/profile', '_blank')">
+        <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.s;"
+          onclick="window.open('https://www.naukri.com/mnjuser/profile', '_blank')">
           <h5>Naukri</h5>
           <p>My professional job profile</p>
         </div>
@@ -181,41 +187,52 @@
 
   <footer class="footer " style="background: linear-gradient(90deg, #1a2630, #47384d, #354635);">
     <span style="color:#FFD166;">&copy; 2025 FocusCore |</span><span style="color:#FFFFFF;"> Designed by
-          Lipun</span>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      Lipun</span>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-<script>
-  var typed = new Typed('#typing-text', {
-    strings: [
-      'Full-Stack Developer',
-      'DSA Enthusiast',
-      'Automation Tester',
-      'Java & Python Lover',
-      'Building Creative UIs'
-    ],
-    typeSpeed: 60,
-    backSpeed: 40,
-    backDelay: 1500,
-    startDelay: 500,
-    loop: true,
-    showCursor: true,
-    cursorChar: '|'
-  });
-            const scrollBtn = document.querySelector(".scroll-top-btn");
+  <script>
+    var typed = new Typed('#typing-text', {
+      strings: [
+        'Full-Stack Developer',
+        'DSA Enthusiast',
+        'Automation Tester',
+        'Java & Python Lover',
+        'Building Creative UIs'
+      ],
+      typeSpeed: 60,
+      backSpeed: 40,
+      backDelay: 1500,
+      startDelay: 500,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|'
+    });
+    const scrollBtn = document.querySelector(".scroll-top-btn");
 
-            window.onscroll = () => {
-              scrollBtn.style.display = window.scrollY > 400 ? "block" : "none";
-            };
-          
-            scrollBtn.onclick = () => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            };
-            AOS.init({
-                  duration: 1000,
-                  once: true
-            });
-      </script>
+    window.onscroll = () => {
+      scrollBtn.style.display = window.scrollY > 400 ? "block" : "none";
+    };
+
+    scrollBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    const cursor = document.createElement("div");
+    cursor.classList.add("cursor");
+    document.body.appendChild(cursor);
+
+    document.addEventListener("mousemove", (e) => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+    });
+    
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
