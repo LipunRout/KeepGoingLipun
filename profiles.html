@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.png" sizes="32x32" type="image/png" />
   <link rel="icon" href="favicon.png" sizes="16x16" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  
 
   <style>
     body {
@@ -143,45 +146,62 @@
 
   </section>
 
-  <!-- Profiles Section -->
   <section class="container py-5">
     <h2 class="section-title text-center mb-5">My Profiles</h2>
     <div class="row justify-content-center g-4">
-      <div class="col-md-4">
-        <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.1s;"
-          onclick="window.open('https://github.com/LipunRout', '_blank')">
-          <h5>GitHub</h5>
-          <p>Check out my coding projects and repos</p>
-        </div>
+      
+     <!-- GitHub -->
+     <div class="col-md-4">
+      <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.1s;"
+        onclick="window.open('https://github.com/LipunRout', '_blank')">
+        <i class="fab fa-github fa-3x mb-3 text-dark"></i>
+        <h5>GitHub</h5>
+        <p>Check out my coding projects and repos</p>
       </div>
-      <div class="col-md-4">
-        <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.2s;"
-          onclick="window.open('https://www.linkedin.com/in/lipun-rout-a564b6285/', '_blank')">
-          <h5>LinkedIn</h5>
-          <p>Connect professionally and view my resume</p>
-        </div>
+    </div>
+
+    <!-- LinkedIn -->
+    <div class="col-md-4">
+      <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.2s;"
+        onclick="window.open('https://www.linkedin.com/in/lipun-rout-a564b6285/', '_blank')">
+        <i class="fab fa-linkedin fa-3x mb-3 text-primary"></i>
+        <h5>LinkedIn</h5>
+        <p>Connect professionally and view my resume</p>
       </div>
-      <div class="col-md-4">
-        <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.3s;"
-          onclick="window.open('https://leetcode.com/u/lipunrout07/', '_blank')">
-          <h5>LeetCode</h5>
-          <p>My algorithm practice and contest profile</p>
-        </div>
-      </div>
+    </div>
+  
+ <!-- LeetCode -->
+ <div class="col-md-4">
+  <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.3s;"
+    onclick="window.open('https://leetcode.com/u/lipunrout07/', '_blank')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+         alt="LeetCode" class="mb-3" style="height: 40px; width:fit-content; margin:auto;" />
+    <h5>LeetCode</h5>
+    <p>My algorithm practice and contest profile</p>
+  </div>
+</div> 
+      <!-- HackerRank -->
       <div class="col-md-4">
         <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.4s;"
           onclick="window.open('https://www.hackerrank.com/profile/lipunrout0107', '_blank')">
+          <img src="https://cdn.worldvectorlogo.com/logos/hackerrank.svg"
+               alt="HackerRank" class="mb-3" style="height: 40px;" />
           <h5>HackerRank</h5>
           <p>Challenges and competitions profile</p>
         </div>
       </div>
+  
+      <!-- Naukri -->
       <div class="col-md-4">
-        <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.s;"
+        <div class="card profile-card text-center p-4 animate-up" style="animation-delay: 0.5s;"
           onclick="window.open('https://www.naukri.com/mnjuser/profile', '_blank')">
+          <img src="https://play-lh.googleusercontent.com/76gEFhQto5xMHr2Qf8nWLvm1s0O60clhkwHvxQDSeI3hthf7Zs05JJQeyg5H347DGQ"
+               alt="Naukri" class="mb-3" style="height: 40px; width:fit-content; margin:auto;" />
           <h5>Naukri</h5>
           <p>My professional job profile</p>
         </div>
       </div>
+  
     </div>
   </section>
 
@@ -232,6 +252,10 @@
     });
     
   </script>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
