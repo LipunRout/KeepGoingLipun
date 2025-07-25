@@ -1,270 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile | FocusCore</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Profile | FocusCore</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="favicon.png" sizes="16x16" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="favicon.png" sizes="32x32" type="image/png" />
-  <link rel="icon" href="favicon.png" sizes="16x16" type="image/png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to right, #e0f7fa, #e9f5ff);
+        color: #f1f1f1;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
 
-  
+      .container {
+        flex: 1;
+      }
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #e0f7fa, #e9f5ff);
-      color: #f1f1f1;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+      .navbar {
+        background: linear-gradient(to right, #434343, #000000);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
 
-    .container {
-      flex: 1;
-    }
+      .navbar-brand {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #00fff7;
+      }
 
-    .navbar {
-      background: linear-gradient(to right, #434343, #000000);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
+      .nav-link {
+        color: #fff !important;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
 
-    .navbar-brand {
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: #00fff7;
-    }
+      .nav-link:hover {
+        color: #00fff7 !important;
+      }
 
-    .nav-link {
-      color: #fff !important;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
+      .section-title {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #00fff7;
+      }
 
-    .nav-link:hover {
-      color: #00fff7 !important;
-    }
+      .profile-card {
+        background: #2c3e50;
+        border: none;
+        border-radius: 15px;
+        color: white;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        cursor: pointer;
+      }
 
-    .section-title {
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: #00fff7;
-    }
+      .profile-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 255, 247, 0.2);
+        background: #34495e;
+      }
 
-    .profile-card {
-      background: #2c3e50;
-      border: none;
-      border-radius: 15px;
-      color: white;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      cursor: pointer;
-    }
+      .profile-card h5 {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
 
-    .profile-card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 10px 25px rgba(0, 255, 247, 0.2);
-      background: #34495e;
-    }
+      .profile-card p {
+        font-size: 0.95rem;
+        opacity: 0.85;
+      }
 
-    .profile-card h5 {
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
+      footer {
+        background: #111;
+        color: #aaa;
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
 
-    .profile-card p {
-      font-size: 0.95rem;
-      opacity: 0.85;
-    }
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg sticky-top shadow-sm"
+      style="background: linear-gradient(90deg, #1a2630, #47384d, #354635)"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="index.html">
+          <span style="color: #ffd166">Focus</span
+          ><span style="color: #ffffff">Core</span>
+        </a>
 
-    footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 1rem 0;
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+        </button>
 
-<body>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav text-center">
+            <li class="nav-item mx-2">
+              <a
+                class="nav-link text-white fw-medium nav-animate"
+                href="index.html#tasks"
+                >Tasks</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a
+                class="nav-link text-white fw-medium nav-animate"
+                href="index.html#project"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a
+                class="nav-link text-white fw-medium nav-animate"
+                href="index.html#blog"
+                >Blog</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a
+                class="nav-link text-white fw-medium nav-animate"
+                href="index.html#contact"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a
+                class="btn btn-outline-warning rounded-pill px-3 py-1"
+                href="index.html"
+                role="button"
+                >Home</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg sticky-top shadow-sm"
-    style="background: linear-gradient(90deg, #1a2630, #47384d, #354635);">
-    <div class="container">
-      <a class="navbar-brand fw-bold fs-4" href="index.html">
-        <span style="color:#FFD166;">Focus</span><span style="color:#FFFFFF;">Core</span>
+    <!-- Profile Hero Image -->
+    <section
+      class="text-center pt-5 pb-3"
+      style="background: linear-gradient(to right, #f0f4ff, #ffffff)"
+    >
+      <a
+        href="https://www.linkedin.com/in/lipun-rout-a564b6285/"
+        target="_blank"
+      >
+        <img src="IMG3.JPG" alt="Lipun Rout" class="profile-img mb-3" />
       </a>
-
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav text-center">
-          <li class="nav-item mx-2">
-            <a class="nav-link text-white fw-medium nav-animate" href="index.html#tasks">Tasks</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link text-white fw-medium nav-animate" href="index.html#project">Projects</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link text-white fw-medium nav-animate" href="index.html#blog">Blog</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link text-white fw-medium nav-animate" href="index.html#contact">Contact</a>
-          </li>
-          <li class="nav-item mx-2">
-            <a class="btn btn-outline-warning rounded-pill px-3 py-1" href="index.html" role="button">Home</a>
-          </li>
-        </ul>
+      <div class="text-center my-4">
+        <h2 class="hero-title fw-bold">Lipun Rout</h2>
+        <p class="hero-subtitle">
+          <span id="typing-text"></span>
+        </p>
       </div>
-    </div>
-  </nav>
+    </section>
 
-  <!-- Profile Hero Image -->
-  <section class="text-center pt-5 pb-3" style="background: linear-gradient(to right, #f0f4ff, #ffffff);">
-    <a href="https://www.linkedin.com/in/lipun-rout-a564b6285/" target="_blank">
-      <img src="IMG3.JPG" alt="Lipun Rout" class="profile-img mb-3" />
-    </a>
-    <div class="text-center my-4">
-      <h2 class="hero-title fw-bold">Lipun Rout</h2>
-      <p class="hero-subtitle">
-        <span id="typing-text"></span>
-      </p>
+    <section class="container py-5">
+      <h2 class="section-title text-center mb-5">My Profiles</h2>
+      <div class="row justify-content-center g-4">
+        <!-- GitHub -->
+        <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
+          <div class="card profile-card text-center p-4">
+            <a href="https://github.com/LipunRout" target="_blank"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                alt="GitHub"
+                class="mb-3"
+                style="height: 40px; width: 40px; margin: auto"
+            /></a>
 
-    </div>
+            <h5>GitHub</h5>
+            <p>Check out my coding projects and repos</p>
+          </div>
+        </div>
 
+        <!-- LinkedIn -->
+        <div class="col-md-4" data-aos="fade-left" data-aos-delay="200">
+          <div class="card profile-card text-center p-4">
+            <a
+              href="https://www.linkedin.com/in/lipun-rout-a564b6285/"
+              target="_blank"
+              ><img
+                src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                alt="LinkedIn"
+                class="mb-3"
+                style="height: 40px; width: 40px; margin: auto"
+            /></a>
 
-  </section>
+            <h5>LinkedIn</h5>
+            <p>Connect professionally and view my resume</p>
+          </div>
+        </div>
 
-  <section class="container py-5">
-    <h2 class="section-title text-center mb-5">My Profiles</h2>
-    <div class="row justify-content-center g-4">
-  
-      <!-- GitHub -->
-      <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
-        <div class="card profile-card text-center p-4">
-          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-               alt="GitHub" class="mb-3" style="height: 40px; width: 40px; margin: auto;" />
-          <h5>GitHub</h5>
-          <p>Check out my coding projects and repos</p>
+        <!-- LeetCode -->
+        <div class="col-md-4" data-aos="fade-right" data-aos-delay="300">
+          <div class="card profile-card text-center p-4">
+            <a href="https://leetcode.com/u/lipunrout07/" target="_blank">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                alt="LeetCode"
+                class="mb-3"
+                style="height: 40px; width: auto; margin: auto"
+            /></a>
+
+            <h5>LeetCode</h5>
+            <p>My algorithm practice and contest profile</p>
+          </div>
+        </div>
+
+        <!-- HackerRank -->
+        <div class="col-md-4" data-aos="fade-left" data-aos-delay="400">
+          <div class="card profile-card text-center p-4">
+            <a
+              href="https://www.hackerrank.com/profile/lipunrout0107"
+              target="_blank"
+              ><img
+                src="https://cdn.worldvectorlogo.com/logos/hackerrank.svg"
+                alt="HackerRank"
+                class="mb-3"
+                style="height: 40px; width: auto; margin: auto"
+            /></a>
+
+            <h5>HackerRank</h5>
+            <p>Challenges and competitions profile</p>
+          </div>
+        </div>
+
+        <!-- Naukri -->
+        <div class="col-md-4" data-aos="fade-right" data-aos-delay="500">
+          <div class="card profile-card text-center p-4">
+            <a href="https://www.naukri.com/mnjuser/profile" target="_blank"
+              ><img
+                src="https://play-lh.googleusercontent.com/76gEFhQto5xMHr2Qf8nWLvm1s0O60clhkwHvxQDSeI3hthf7Zs05JJQeyg5H347DGQ"
+                alt="Naukri"
+                class="mb-3"
+                style="height: 40px; width: auto; margin: auto"
+            /></a>
+
+            <h5>Naukri</h5>
+            <p>My professional job profile</p>
+          </div>
         </div>
       </div>
-  
-      <!-- LinkedIn -->
-      <div class="col-md-4" data-aos="fade-left" data-aos-delay="200">
-        <div class="card profile-card text-center p-4">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-               alt="LinkedIn" class="mb-3" style="height: 40px; width: 40px; margin: auto;" />
-          <h5>LinkedIn</h5>
-          <p>Connect professionally and view my resume</p>
-        </div>
-      </div>
-  
-      <!-- LeetCode -->
-      <div class="col-md-4" data-aos="fade-right" data-aos-delay="300">
-        <div class="card profile-card text-center p-4">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
-               alt="LeetCode" class="mb-3" style="height: 40px; width: auto; margin: auto;" />
-          <h5>LeetCode</h5>
-          <p>My algorithm practice and contest profile</p>
-        </div>
-      </div>
-  
-      <!-- HackerRank -->
-      <div class="col-md-4" data-aos="fade-left" data-aos-delay="400">
-        <div class="card profile-card text-center p-4">
-          <img src="https://cdn.worldvectorlogo.com/logos/hackerrank.svg"
-               alt="HackerRank" class="mb-3" style="height: 40px; width: auto; margin: auto;" />
-          <h5>HackerRank</h5>
-          <p>Challenges and competitions profile</p>
-        </div>
-      </div>
-  
-      <!-- Naukri -->
-      <div class="col-md-4" data-aos="fade-right" data-aos-delay="500">
-        <div class="card profile-card text-center p-4">
-          <img src="https://play-lh.googleusercontent.com/76gEFhQto5xMHr2Qf8nWLvm1s0O60clhkwHvxQDSeI3hthf7Zs05JJQeyg5H347DGQ"
-               alt="Naukri" class="mb-3" style="height: 40px; width: auto; margin: auto;" />
-          <h5>Naukri</h5>
-          <p>My professional job profile</p>
-        </div>
-      </div>
-  
-    </div>
-  </section>
-  
-  <footer class="footer " style="background: linear-gradient(90deg, #1a2630, #47384d, #354635);">
-    <span style="color:#FFD166;">&copy; 2025 FocusCore |</span><span style="color:#FFFFFF;"> Designed by
-      Lipun</span>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 700,    // Smooth animation time
-      once: true,       // Run animation only once
-      easing: 'ease-in-out'
-    });
-  </script>
+    </section>
 
+    <footer
+      class="footer"
+      style="background: linear-gradient(90deg, #1a2630, #47384d, #354635)"
+    >
+      <span style="color: #ffd166">&copy; 2025 FocusCore |</span
+      ><span style="color: #ffffff"> Designed by Lipun</span>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 700, // Smooth animation time
+        once: true, // Run animation only once
+        easing: "ease-in-out",
+      });
+    </script>
 
-  <script>
-    var typed = new Typed('#typing-text', {
-      strings: [
-        'Full-Stack Developer',
-        'DSA Enthusiast',
-        'Automation Tester',
-        'Java & Python Lover',
-        'Building Creative UIs'
-      ],
-      typeSpeed: 60,
-      backSpeed: 40,
-      backDelay: 1500,
-      startDelay: 500,
-      loop: true,
-      showCursor: true,
-      cursorChar: '|'
-    });
-    const scrollBtn = document.querySelector(".scroll-top-btn");
+    <script>
+      var typed = new Typed("#typing-text", {
+        strings: [
+          "Full-Stack Developer",
+          "DSA Enthusiast",
+          "Automation Tester",
+          "Java & Python Lover",
+          "Building Creative UIs",
+        ],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 1500,
+        startDelay: 500,
+        loop: true,
+        showCursor: true,
+        cursorChar: "|",
+      });
+      const scrollBtn = document.querySelector(".scroll-top-btn");
 
-    window.onscroll = () => {
-      scrollBtn.style.display = window.scrollY > 400 ? "block" : "none";
-    };
+      window.onscroll = () => {
+        scrollBtn.style.display = window.scrollY > 400 ? "block" : "none";
+      };
 
-    scrollBtn.onclick = () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    };
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+      scrollBtn.onclick = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
 
-    const cursor = document.createElement("div");
-    cursor.classList.add("cursor");
-    document.body.appendChild(cursor);
+      const cursor = document.createElement("div");
+      cursor.classList.add("cursor");
+      document.body.appendChild(cursor);
 
-    document.addEventListener("mousemove", (e) => {
-      cursor.style.left = e.clientX + "px";
-      cursor.style.top = e.clientY + "px";
-    });
-    
-  </script>
-  <script>
-    lucide.createIcons();
-  </script>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+    </script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
